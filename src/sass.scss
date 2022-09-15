@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700&display=swap");
+
+$font: "Source Sans Pro", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: $font;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+.container{
+  width: 100%;
+  margin: 1em auto;
+}
+
+.grid {
+  display: grid;
+  margin-left: .5px;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 0.2em;
+  justify-content: center;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-body>.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 700px;
+  justify-content: space-between;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
